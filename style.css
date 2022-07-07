@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -5,76 +6,146 @@
 }
 
 body{
+    background-color: hsl(0, 100%, 74%) ;
     background-image: url('./images/bg-intro-desktop.png');
-    background-size: cover;
-    min-height: 100vh;
-    position: relative;
     font-family: 'Poppins', sans-serif;
+    color: #fff;
 }
 
-body::after{
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color:  hsla(0, 100%, 74%, 0.438);
-    z-index: -1;
-}
 
 .page-content{
     display: flex;
-    justify-content: space-between;
-  
-}
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1440px;
+    min-height: 100vh;
+    
 
-.left-content{
-    margin: 20rem 8rem 16rem 8rem  ;
-    color: #fff;
-}
-.right-content{
-    display: grid;
-    margin: 8rem;
 
 }
-.tryit-btn{
-    height: 35px;
-    width: 300px;
-    background-color: hsl(248, 32%, 49%);
-    color: #fff;
-    margin-bottom: 1rem;
-    border-radius: 4px;
-    border-style: none;
+
+.page-content > div{
+    flex: 1;
+    padding:20px ;
+}
+.left-content h1{
+    font-size: 40px;
+    line-height: 50px;
     
 }
-.form-content{
-    height: 380px;
-    width: 400px;
-    background-color: #fff;
-    padding: 3rem;
-    border-radius: 4px;
+p{
+    font-size: 15px;
+    opacity: 0.8;
 }
-.inputcontent{
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+.box{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 6px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.box p{
+    margin: 0;
+    
+}
+.box-blue{
+    padding: 20px;
+    background-color: hsl(248, 32%, 49%);
 }
 input{
-    border: 1px solid #d3d3d3;
-    border-radius: 4px;
-    height: 35px;
-    width: 300px; 
-    padding: 10px;
+    
+    border-radius: 5px;
+    border: 1.3px solid hsl(246, 25%, 77%);
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 15px 25px ;  
+    width: 100%;
     
 }
-#submit-btn{
-    background-color: hsl(154, 59%, 51%);
-    color: #fff;
-}
-.terms-p{
-    font-size: 12px;
+input:focus{
+    border: 1px solid hsl(248, 32%, 49%);
+    outline: none;
 }
 
-a{
-    color: hsl(0, 100%, 74%);
+.inputcontent{
+    margin-bottom: 30px;
+    position: relative;
+    
 }
+.inputcontent small{
+    position: absolute;
+    bottom: -20;
+    opacity: 0;
+    right: 0;
+    text-align: right;
+}
+
+button{
+    display: block;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color: hsl(154, 59%, 51%);
+    color: #fff;
+    font-weight: 500;
+    border: 1.3px solid hsl(154, 59%, 40%);
+    box-shadow: 0 2px hsl(154, 59%, 40%);
+    width: 100%;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 15px 25px ;
+}
+
+button:focus{
+    outline: none;
+}
+button:active{
+    box-shadow: 0 0 hsl(154, 59%, 40%);
+    transform: translateY(2px);
+}
+small{
+    display: block;
+    color: #bbb;
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 15px;
+
+}
+small a{
+    color: hsl(0, 100%, 74%);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 375px) {
+
+    body{
+        background-image: url('./images/bg-intro-mobile.png');
+    }
+    .page-content{
+        flex-direction: column;
+    }
+
+    .left-content h1{
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 28px;
+        margin-bottom: 10px;
+        text-align: center;
+        
+    }
+
+     p{
+        font-size: 13px;
+        text-align: center;
+    }
+    
+}
+
+
+
